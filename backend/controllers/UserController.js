@@ -1,6 +1,9 @@
 import User from '../models/User.js';
+import jwt from 'jsonwebtoken';
 
 // TODO: remove user details from json response
+
+const JWT_SECRET = process.env.JWT_SECRET;
 
 const UserController = {
 
@@ -29,14 +32,14 @@ const UserController = {
         const validPassword = await user.validatePassword(password);
         if (!validPassword) return res.status(401).json({ error: 'Invalid credentials' });
 
-        //const token = jwt.sign({ id: user.id, username: user.username }, JWT_SECRET, { expiresIn: '1h' });
+        const token = jwt.sign({ id: user.id, username: user.username }, JWT_SECRET, { expiresIn: '1h' });
 
-        //res.json({ token });
+        res.json({ token });
 
         res.status(200).json({message: "User logged in"});
     },
 
-    // Fetches all entries
+    // Fetches all users (for dev purposes only)
     getAllUsers: async (req, res) => {
     try {
         const user = await User.findAll();
