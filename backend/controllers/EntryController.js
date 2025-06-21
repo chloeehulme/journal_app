@@ -1,5 +1,7 @@
 import Entry from '../models/Entry.js';
 
+// TODO: remove entry details from json response
+
 const EntryController = {
 
   // Fetches all entries
@@ -9,7 +11,7 @@ const EntryController = {
     
         if (!entry) return res.status(404).json({ error: 'Entry not found' });
     
-        res.status(200).json();
+        res.status(200).json(entry);
       } catch (error) {
         res.status(500).json({ error: error.message });
       }
@@ -23,7 +25,7 @@ const EntryController = {
     
         if (!entry) return res.status(404).json({ error: 'Entry not found' });
     
-        res.status(200).json();
+        res.status(200).json(entry);
       } catch (error) {
         res.status(500).json({ error: error.message });
       }
@@ -35,7 +37,7 @@ const EntryController = {
         const { subject, date, content, mood, challenge, lesson, peak, pit, gratitude } = req.body;
     
         const newEntry = await Entry.create({ subject, date, content, mood, challenge, lesson, peak, pit, gratitude });
-        res.status(201).json();
+        res.status(201).json(newEntry);
       } catch (error) {
         res.status(500).json({ error: error.message });
       }
