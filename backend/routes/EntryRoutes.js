@@ -2,13 +2,12 @@ import { Router } from 'express';
 const router = Router();
 
 // Import coontroller
-import * as EntryController from "../controllers/EntryController";
+import * as EntryController from "../controllers/EntryController.js";
 
 // Map to correct function
-router.get("/", EntryController.getAllEntries);
-router.get("/:id", EntryController.getEntryById);
-router.post("/", EntryController.createEntry);
-router.delete("/:id", EntryController.deleteEntryById);
+router.get("/", EntryController.default.getAllEntries);
+router.get("/:id", EntryController.default.getEntryById);
+router.post("/", EntryController.default.createEntry);
+router.delete("/:id", EntryController.default.deleteEntryById);
 
-// Export the router correctly
 export default router;

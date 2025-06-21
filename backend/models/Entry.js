@@ -1,12 +1,8 @@
-// models/Entry.js
-const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = new Sequelize('journal_app', 'postgres', 'mysecretpassword', {
-  host: 'localhost',   // connect to local machine where docker port is exposed
-  dialect: 'postgres',
-  port: 5432,          // default PostgreSQL port, mapped to container
-});
+import { Sequelize, DataTypes } from 'sequelize';
+import connection from '../config/db.js';
 
-const Entry = sequelize.define('Entry', {
+// Entry model
+const Entry = connection.define('Entry', {
   subject: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -49,4 +45,4 @@ const Entry = sequelize.define('Entry', {
   timestamps: false,
 });
 
-module.exports = Entry;
+export default Entry;

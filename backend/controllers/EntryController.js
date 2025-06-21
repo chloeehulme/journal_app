@@ -1,4 +1,4 @@
-const Entry = require('../models/Entry');
+import Entry from '../models/Entry.js';
 
 const EntryController = {
 
@@ -9,7 +9,7 @@ const EntryController = {
     
         if (!entry) return res.status(404).json({ error: 'Entry not found' });
     
-        res.json(entry);
+        res.status(200).json();
       } catch (error) {
         res.status(500).json({ error: error.message });
       }
@@ -23,7 +23,7 @@ const EntryController = {
     
         if (!entry) return res.status(404).json({ error: 'Entry not found' });
     
-        res.json(entry);
+        res.status(200).json();
       } catch (error) {
         res.status(500).json({ error: error.message });
       }
@@ -35,7 +35,7 @@ const EntryController = {
         const { subject, date, content, mood, challenge, lesson, peak, pit, gratitude } = req.body;
     
         const newEntry = await Entry.create({ subject, date, content, mood, challenge, lesson, peak, pit, gratitude });
-        res.status(201).json(newEntry);
+        res.status(201).json();
       } catch (error) {
         res.status(500).json({ error: error.message });
       }
@@ -57,4 +57,4 @@ const EntryController = {
 
 };
 
-module.exports = EntryController;
+export default EntryController;

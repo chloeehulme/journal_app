@@ -1,7 +1,7 @@
-const express = require('express');
+import express, { json } from 'express';
 const app = express();
-const EntryRoutes = require("./routes/EntryRoutes").default;
-app.use(express.json());
+import EntryRoutes from "./routes/EntryRoutes.js";
+app.use(json());
 
 // Routes
 app.use("/entry", EntryRoutes);
