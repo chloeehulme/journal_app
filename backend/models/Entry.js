@@ -1,11 +1,12 @@
 import { Sequelize, DataTypes } from 'sequelize';
 import connection from '../config/db.js';
 
-// TODO: update mood and gratitude to NOT NULL when deploying
-
-
 // Entry model
 const Entry = connection.define('Entry', {
+  user_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
   subject: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -21,7 +22,7 @@ const Entry = connection.define('Entry', {
   },
   mood: {
     type: DataTypes.STRING,
-    allowNull: true,
+    allowNull: false,
   },
   challenge: {
     type: DataTypes.STRING,
@@ -41,7 +42,7 @@ const Entry = connection.define('Entry', {
   },
   gratitude: {
     type: DataTypes.STRING,
-    allowNull: true,
+    allowNull: false,
   }
 }, {
   tableName: 'journal_entries',

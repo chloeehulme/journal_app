@@ -1,4 +1,4 @@
-// middleware/authenticateToken.js
+// Handles authentication
 import dotenv from 'dotenv';
 import jwt from 'jsonwebtoken';
 

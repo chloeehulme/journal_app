@@ -1,12 +1,8 @@
 import { Router } from 'express';
 const router = Router();
 
-// Import coontroller and authentication
+// Import controller
 import * as EntryController from "../controllers/EntryController.js";
-import { authenticateToken } from '../middleware/authenticateToken.js';
-
-// Protect all routes
-router.use(authenticateToken);
 
 // Map to correct function
 router.get("/", EntryController.default.getAllEntries);

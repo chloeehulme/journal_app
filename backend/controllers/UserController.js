@@ -34,9 +34,10 @@ const UserController = {
 
         const token = jwt.sign({ id: user.id, username: user.username }, JWT_SECRET, { expiresIn: '1h' });
 
-        res.json({ token });
-
-        res.status(200).json({message: "User logged in"});
+        res.status(200).json({
+            message: "User logged in",
+            token
+        });
     },
 
     // Fetches all users (for dev purposes only)
