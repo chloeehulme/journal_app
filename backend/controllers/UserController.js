@@ -2,6 +2,7 @@ import User from '../models/User.js';
 import jwt from 'jsonwebtoken';
 
 // TODO: remove user details from json response
+// TODO: build password validation of length and chars into signUp
 
 const JWT_SECRET = process.env.JWT_SECRET;
 
