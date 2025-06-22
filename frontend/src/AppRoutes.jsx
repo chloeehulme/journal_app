@@ -1,9 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import Dashboard from './components/Dashboard/Dashboard.jsx';
-
-function HomePage() {
-  return <h1>Hello World from HomePage</h1>;
-}
+import HomePage from './pages/HomePage.jsx';
 
 function AppRoutes() {
   return (
