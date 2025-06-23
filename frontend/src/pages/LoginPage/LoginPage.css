@@ -14,11 +14,17 @@ input {
     padding: 6px;
     flex-grow: 1;
     width: 90%;
-    background-color: #fbeee0;
+    background-color: #E0E0FF;
+    color: #581845;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
 }
 
 .button-74 {
-  background-color: #fbeee0;
+  background-color: #E0E0FF;
   border: 2px solid #581845;
   border-radius: 30px;
   box-shadow: #581845 4px 4px 0 0;
@@ -31,7 +37,7 @@ input {
 
   font-weight: 600;
   font-size: 14px;
-  padding: 0 18px;
+  padding: 0 20%;
   line-height: 30px;
   text-align: center;
   text-decoration: none;
