@@ -1,0 +1,10 @@
+.entry_date {
+    font-size: x-small;
+}
+
+.header-container {
+    background-color: white;
+    padding: 10px;
+    border-radius: 0px 0px 3px 3px;
+    background-color: #fefae0;
+}

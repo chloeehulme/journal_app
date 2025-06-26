@@ -1,9 +1,9 @@
 .navbar {
-    background-color: #900C3F;
-    color: #E0E0FF ;
+    background: #e18f83;
+    color: #512a31;
     padding: 1rem 1rem;
     align-items: center;
     font-family: sans-serif;
-    border-bottom: 3px solid #581845;
+    border-bottom: 3px solid #723d46;
     border-radius: 5px;
 }

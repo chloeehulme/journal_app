@@ -28,6 +28,7 @@ function LoginPage() {
 
             if (token) {
                 sessionStorage.setItem('token', token);
+                sessionStorage.setItem('name', username);
                 navigate('/home');
             } else {
                 setErrorMsg('Login failed. Please check your credentials.');
@@ -42,11 +43,11 @@ function LoginPage() {
     return(
         <div className="homepage">
             <Navbar >
-                <h1 className="savate-bold" style={{ textAlign: 'center', fontSize: '200%' }}>Journal App</h1>
+                <h1 className="savate-bold" style={{ textAlign: 'center', fontSize: 'medium' }}>Journal App</h1>
             </Navbar>
             <Card>
                 <form onSubmit={handleSubmit}>
-                    <h2 className="savate-normal" style={{ color: '#E0E0FF' }}>Please login...</h2>
+                    <h2 className="savate-normal">Please login...</h2>
                     <div className="login-container">
                         <input className="savate-normal" type="text" id="username" name="username" placeholder="Username..." />
                         <input className="savate-normal" type="password" id="pass" name="password" placeholder="Password..." minLength="10" required />

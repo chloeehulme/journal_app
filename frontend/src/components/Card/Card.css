@@ -1,13 +1,15 @@
 .card {
-  background-color: #900C3F;
+  background-color: #fefae0;
   width: 70%;
-  color: white;
+  color: #723d46;
   padding: 2rem 2rem;
   justify-self: center;
   border-radius: 5px;
   margin-top: 30px;
-  font-family: sans-serif;
   border: 3px;
   border-style: solid;
-  border-color: #581845;
+  border-color: #723d46;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
