@@ -1,9 +1,13 @@
 .navbar {
-    background: #e18f83;
+    background: #d4efdf;
     color: #512a31;
     padding: 1rem 1rem;
-    align-items: center;
     font-family: sans-serif;
     border-bottom: 3px solid #723d46;
     border-radius: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 800;
+    display: flex;
+    align-items: center;
 }

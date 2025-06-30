@@ -43,7 +43,7 @@ function LoginPage() {
     return(
         <div className="homepage">
             <Navbar >
-                <h1 className="savate-bold" style={{ textAlign: 'center', fontSize: 'medium' }}>Journal App</h1>
+                <h1 className="savate-bold" style={{ textAlign: 'center', fontSize: 'x-large' }}>Journal App</h1>
             </Navbar>
             <Card>
                 <form onSubmit={handleSubmit}>

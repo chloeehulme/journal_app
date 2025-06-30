@@ -1,13 +1,13 @@
 .dashboard {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  background-color: #c9cba3;
+  background-color: #ffeafe;
   border-radius: 5px;
   color: #723d46;
-  height: 100%;
+  width: auto;
 }
 
 .pageContent {
   flex: 1;
+  width: auto;
 }
